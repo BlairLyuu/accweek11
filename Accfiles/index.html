@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>命 míng — What are you made of?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+SC:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PAGE 1: LANDING -->
+  <section id="page-landing" class="page active">
+    <div class="landing-content">
+      <span class="chinese-ambient">命</span>
+      <p class="eyebrow">míng · 命</p>
+      <h1>You know your sign.<br>But do you know what<br><em>you're made of?</em></h1>
+      <p class="subtitle">Western astrology maps you to the cosmos.<br>BaZi maps you to the earth.</p>
+      <button class="btn-primary" onclick="goTo('page-input')">Begin →</button>
+    </div>
+  </section>
+
+  <!-- PAGE 2: INPUT -->
+  <section id="page-input" class="page">
+    <div class="input-content">
+      <p class="step-label">Your birth date</p>
+      <h2>When were you born?</h2>
+
+      <div class="input-group">
+        <label>Year</label>
+        <input type="number" id="birth-year" placeholder="e.g. 1998" min="1924" max="2006" />
+      </div>
+
+      <div class="input-group">
+        <label>Month</label>
+        <select id="birth-month">
+          <option value="">Select month</option>
+          <option value="1">January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Day</label>
+        <input type="number" id="birth-day" placeholder="e.g. 14" min="1" max="31" />
+      </div>
+
+      <div class="input-group">
+        <label>Hour <span class="optional">(optional)</span></label>
+        <select id="birth-hour">
+          <option value="unknown">I don't know</option>
+          <option value="0">子时 · 11pm – 1am</option>
+          <option value="2">丑时 · 1am – 3am</option>
+          <option value="4">寅时 · 3am – 5am</option>
+          <option value="6">卯时 · 5am – 7am</option>
+          <option value="8">辰时 · 7am – 9am</option>
+          <option value="10">巳时 · 9am – 11am</option>
+          <option value="12">午时 · 11am – 1pm</option>
+          <option value="14">未时 · 1pm – 3pm</option>
+          <option value="16">申时 · 3pm – 5pm</option>
+          <option value="18">酉时 · 5pm – 7pm</option>
+          <option value="20">戌时 · 7pm – 9pm</option>
+          <option value="22">亥时 · 9pm – 11pm</option>
+        </select>
+      </div>
+
+      <button class="btn-primary" onclick="calculate()">Calculate my chart →</button>
+      <p class="privacy-note">Your data is stored locally. We never see it.</p>
+    </div>
+  </section>
+
+  <!-- PAGE 3: LOADING -->
+  <section id="page-loading" class="page">
+    <div class="loading-content">
+      <div id="loading-chars" class="loading-chars">
+        <span>年</span>
+        <span>月</span>
+        <span>日</span>
+        <span>时</span>
+        <span>·</span>
+        <span>天</span>
+        <span>干</span>
+        <span>地</span>
+        <span>支</span>
+      </div>
+      <p class="loading-text">Reading your chart...</p>
+    </div>
+  </section>
+
+  <!-- PAGE 4: RESULT -->
+  <section id="page-result" class="page">
+
+    <!-- Screen 1: Day Master -->
+    <div class="result-screen active" id="screen-daymaster">
+      <div class="result-inner">
+        <p class="step-label">Your elemental self · 日主</p>
+        <div class="element-char" id="result-char">辛</div>
+        <div class="element-label" id="result-label">Xīn Metal</div>
+        <p class="element-tagline" id="result-tagline">The cut gemstone.</p>
+        <div class="element-copy" id="result-copy">
+          <!-- injected by JS -->
+        </div>
+        <button class="btn-secondary" onclick="goToScreen('screen-elements')">
+          Your full chart →
+        </button>
+      </div>
+    </div>
+
+    <!-- Screen 2: Five Elements Distribution -->
+    <div class="result-screen" id="screen-elements">
+      <div class="result-inner">
+        <p class="step-label">Your elemental makeup · 五行</p>
+        <h2>What's strong.<br>What's missing.</h2>
+        <div class="elements-chart" id="elements-chart">
+          <!-- injected by JS -->
+        </div>
+        <p class="elements-note" id="elements-note">
+          <!-- injected by JS -->
+        </p>
+        <button class="btn-secondary" onclick="goToScreen('screen-liunian')">
+          2026 for you →
+        </button>
+      </div>
+    </div>
+
+    <!-- Screen 3: 2026 Flow Year -->
+    <div class="result-screen" id="screen-liunian">
+      <div class="result-inner">
+        <p class="step-label">This year · 丙午年 2026</p>
+        <div class="liunian-char">丙</div>
+        <p class="liunian-element">丙 Fire · Yang Fire</p>
+        <div class="liunian-copy" id="liunian-copy">
+          <!-- injected by JS -->
+        </div>
+        <button class="btn-primary" onclick="goToScreen('screen-share')">
+          See your card →
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- PAGE 5: SHARE CARD -->
+  <section id="page-share" class="page">
+    <div class="share-wrapper">
+
+      <div class="share-card" id="share-card">
+        <div class="card-top">
+          <span class="card-logo">命 míng</span>
+          <span class="card-year">2026</span>
+        </div>
+        <div class="card-element-char" id="card-char">辛</div>
+        <div class="card-element-name" id="card-name">Xīn Metal</div>
+        <p class="card-tagline" id="card-tagline">The cut gemstone.</p>
+        <p class="card-line" id="card-line">
+          <!-- one-liner from copy, injected by JS -->
+        </p>
+        <div class="card-bottom">
+          <span>ming.earth</span>
+        </div>
+      </div>
+
+      <p class="share-instruction">Screenshot this card to share your element.</p>
+
+      <div class="resonance-question">
+        <p>Does this resonate?</p>
+        <div class="resonance-btns">
+          <button onclick="saveResonance('yes')" id="res-yes">Deeply</button>
+          <button onclick="saveResonance('somewhat')" id="res-somewhat">Somewhat</button>
+          <button onclick="saveResonance('no')" id="res-no">Not really</button>
+        </div>
+      </div>
+
+      <a class="further-link" href="https://www.wenzhenbazi.com" target="_blank">
+        Go deeper with a full reading →
+      </a>
+
+      <button class="btn-ghost" onclick="goTo('page-input')">
+        Calculate for someone else
+      </button>
+
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/lunar-javascript/lunar.js"></script>
+  <script src="bazi.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
