@@ -8,11 +8,9 @@
   --display: 'Gravitas One', serif;
 }
 
-/* ══════════════════════════════════════
-   10 ELEMENT THEMES
+/* 10 ELEMENT THEMES
    body[data-stem="甲"] etc.
-   Default = neutral grey
-════════════════════════════════════════ */
+   Default = neutral grey */
 :root {
   --bg:       #f2f0eb;
   --bg2:      #e8e5de;
