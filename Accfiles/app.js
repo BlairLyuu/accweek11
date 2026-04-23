@@ -20,25 +20,20 @@ function calculate() {
   if (!year || !month || !day) { alert('Please enter your full birth date.'); return; }
   if (year < 1924 || year > 2006) { alert('Please enter a year between 1924 and 2006.'); return; }
 
-  goTo('p-loading');
+  try {
+    const solar   = Solar.fromYmd(year, month, day);
+    const bazi    = solar.getLunar().getEightChar();
+    const dayStem = bazi.getDayGan();
+    const dm      = DAY_MASTERS[dayStem];
+    if (!dm) throw new Error('Unknown stem: ' + dayStem);
 
-  setTimeout(() => {
-    try {
-      const solar   = Solar.fromYmd(year, month, day);
-      const bazi    = solar.getLunar().getEightChar();
-      const dayStem = bazi.getDayGan();
-      const dm      = DAY_MASTERS[dayStem];
-      if (!dm) throw new Error('Unknown stem: ' + dayStem);
-
-      localStorage.setItem('ming_result', JSON.stringify({ dayStem, dayMaster: dm }));
-      renderResult(dayStem, dm);
-      goTo('p-result');
-    } catch(e) {
-      console.error(e);
-      alert('Something went wrong. Please check your birth date and try again.');
-      goTo('p-input');
-    }
-  }, 1500);
+    localStorage.setItem('ming_result', JSON.stringify({ dayStem, dayMaster: dm }));
+    renderResult(dayStem, dm);
+    goTo('p-result');
+  } catch(e) {
+    console.error(e);
+    alert('Something went wrong. Please check your birth date and try again.');
+  }
 }
 
 function renderResult(dayStem, dm) {
@@ -50,7 +45,8 @@ function renderResult(dayStem, dm) {
   document.getElementById('result-tagline').textContent = dm.tagline;
   document.getElementById('result-copy').innerHTML      = dm.copy;
   document.getElementById('liunian-note').innerHTML     =
-    '<span class="liunian-label">丙午年 2026 · </span>' + LIUNIAN_2026.oneliner[dm.element];
+    '<span class="liunian-label">丙午年 2026   YEAR OF THE YANG FIRE HORSE</span>' +
+    '<p>' + LIUNIAN_2026.oneliner[dm.element] + '</p>';
 }
 
 function selectResonance(value) {

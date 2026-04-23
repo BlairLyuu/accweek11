@@ -1,0 +1,8 @@
+{
+  "name": "bazi-calc",
+  "version": "1.0.0",
+  "dependencies": {
+    "lunar-javascript": "^1.6.0"
+  }
+}</content>
+<parameter name="filePath">/Users/lyuuxina/Documents/accweek11/Accfiles/package.json

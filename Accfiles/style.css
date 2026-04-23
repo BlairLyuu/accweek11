@@ -1,9 +1,4 @@
-/* ══════════════════════════════════════
-   命 míng — Style
-   Greybox-first, 10 element themes
-════════════════════════════════════════ */
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 /* ── Fonts ── */
 :root {
@@ -31,34 +26,34 @@
 }
 
 /* 甲 Yang Wood — deep forest */
-body[data-stem="甲"] { --bg:#e8ede0; --bg2:#dae2ce; --fg:#0f1f0a; --fg2:#3a5030; --fg3:#6a8060; --accent:#1a4010; --ui:rgba(10,40,5,0.08); --ui-mid:rgba(10,40,5,0.15); --ui-strong:rgba(10,40,5,0.4); }
+body[data-stem="甲"] { --bg:#d6dcc4; --bg2:#e5e9f0; --fg:#0f1f0a; --fg2:#5a4818; --fg3:#8a7848; --accent:#6a4800; --ui:rgba(10,20,50,0.08); --ui-mid:rgba(10,20,50,0.15); --ui-strong:rgba(10,20,50,0.4); }
 
 /* 乙 Yin Wood — sage */
-body[data-stem="乙"] { --bg:#eaede3; --bg2:#dde0d4; --fg:#1a2010; --fg2:#485838; --fg3:#788860; --accent:#2d4a20; --ui:rgba(30,50,10,0.08); --ui-mid:rgba(30,50,10,0.15); --ui-strong:rgba(30,50,10,0.4); }
+body[data-stem="乙"] { --bg:#d8dfd0; --bg2:#e5e9f0; --fg:#1a2010; --fg2:#303d50; --fg3:#505d70; --accent:#203050; --ui:rgba(10,20,50,0.08); --ui-mid:rgba(10,20,50,0.15); --ui-strong:rgba(10,20,50,0.4); }
 
 /* 丙 Yang Fire — warm amber */
-body[data-stem="丙"] { --bg:#f5e8d8; --bg2:#eed8c0; --fg:#2a1000; --fg2:#6a3010; --fg3:#a06030; --accent:#b03000; --ui:rgba(80,20,0,0.08); --ui-mid:rgba(80,20,0,0.15); --ui-strong:rgba(80,20,0,0.4); }
+body[data-stem="丙"] { --bg:#e0d4b8; --bg2:#e5e9f0; --fg:#2a1000; --fg2:#5a4818; --fg3:#8a7848; --accent:#6a4800; --ui:rgba(10,20,50,0.08); --ui-mid:rgba(10,20,50,0.15); --ui-strong:rgba(10,20,50,0.4); }
 
 /* 丁 Yin Fire — rose */
-body[data-stem="丁"] { --bg:#f5e4e0; --bg2:#ecd4ce; --fg:#2a0808; --fg2:#6a2820; --fg3:#a05848; --accent:#9a2010; --ui:rgba(80,10,5,0.08); --ui-mid:rgba(80,10,5,0.15); --ui-strong:rgba(80,10,5,0.4); }
+body[data-stem="丁"] { --bg:#e0ccc8; --bg2:#e5e9f0; --fg:#2a0808; --fg2:#303d50; --fg3:#505d70; --accent:#203050; --ui:rgba(10,20,50,0.08); --ui-mid:rgba(10,20,50,0.15); --ui-strong:rgba(10,20,50,0.4); }
 
 /* 戊 Yang Earth — warm stone */
-body[data-stem="戊"] { --bg:#efe8d8; --bg2:#e5dcc8; --fg:#1e1600; --fg2:#5a4818; --fg3:#8a7848; --accent:#6a4800; --ui:rgba(60,40,0,0.08); --ui-mid:rgba(60,40,0,0.15); --ui-strong:rgba(60,40,0,0.4); }
+body[data-stem="戊"] { --bg:#dbd0b8; --bg2:#e5e9f0; --fg:#1e1600; --fg2:#5a4818; --fg3:#8a7848; --accent:#6a4800; --ui:rgba(10,20,50,0.08); --ui-mid:rgba(10,20,50,0.15); --ui-strong:rgba(10,20,50,0.4); }
 
 /* 己 Yin Earth — ochre */
-body[data-stem="己"] { --bg:#f0e8d0; --bg2:#e8dcc0; --fg:#201800; --fg2:#604820; --fg3:#907850; --accent:#785000; --ui:rgba(70,45,0,0.08); --ui-mid:rgba(70,45,0,0.15); --ui-strong:rgba(70,45,0,0.4); }
+body[data-stem="己"] { --bg:#dccdb8; --bg2:#e5e9f0; --fg:#201800; --fg2:#303d50; --fg3:#505d70; --accent:#203050; --ui:rgba(10,20,50,0.08); --ui-mid:rgba(10,20,50,0.15); --ui-strong:rgba(10,20,50,0.4); }
 
 /* 庚 Yang Metal — cool steel */
-body[data-stem="庚"] { --bg:#e8ecf0; --bg2:#d8dee5; --fg:#0a1020; --fg2:#303848; --fg3:#606878; --accent:#203050; --ui:rgba(10,20,50,0.08); --ui-mid:rgba(10,20,50,0.15); --ui-strong:rgba(10,20,50,0.4); }
+body[data-stem="庚"] { --bg:#baa8b8; --bg2:#e5e9f0; --fg:#0a1020; --fg2:#5a4818; --fg3:#8a7848; --accent:#6a4800; --ui:rgba(10,20,50,0.08); --ui-mid:rgba(10,20,50,0.15); --ui-strong:rgba(10,20,50,0.4); }
 
 /* 辛 Yin Metal — silver blue */
-body[data-stem="辛"] { --bg:#eceef2; --bg2:#dfe2e8; --fg:#101420; --fg2:#383d50; --fg3:#686d80; --accent:#2a3560; --ui:rgba(15,25,55,0.08); --ui-mid:rgba(15,25,55,0.15); --ui-strong:rgba(15,25,55,0.4); }
+body[data-stem="辛"] { --bg:#d9dce8; --bg2:#e5e9f0; --fg:#101420; --fg2:#303d50; --fg3:#505d70; --accent:#203050; --ui:rgba(10,20,50,0.08); --ui-mid:rgba(10,20,50,0.15); --ui-strong:rgba(10,20,50,0.4); }
 
 /* 壬 Yang Water — deep navy */
-body[data-stem="壬"] { --bg:#dde5f0; --bg2:#ccd6e8; --fg:#050f25; --fg2:#1a2d50; --fg3:#405070; --accent:#0a2050; --ui:rgba(5,15,60,0.08); --ui-mid:rgba(5,15,60,0.15); --ui-strong:rgba(5,15,60,0.4); }
+body[data-stem="壬"] { --bg:#c8d5e0; --bg2:#e5e9f0; --fg:#050f25; --fg2:#5a4818; --fg3:#8a7848; --accent:#6a4800; --ui:rgba(10,20,50,0.08); --ui-mid:rgba(10,20,50,0.15); --ui-strong:rgba(10,20,50,0.4); }
 
 /* 癸 Yin Water — dark teal */
-body[data-stem="癸"] { --bg:#dce8e8; --bg2:#ccdbdb; --fg:#051515; --fg2:#183030; --fg3:#3a5858; --accent:#0a3030; --ui:rgba(5,30,30,0.08); --ui-mid:rgba(5,30,30,0.15); --ui-strong:rgba(5,30,30,0.4); }
+body[data-stem="癸"] { --bg:#c8dcd8; --bg2:#e5e9f0; --fg:#051515; --fg2:#303d50; --fg3:#505d70; --accent:#203050; --ui:rgba(10,20,50,0.08); --ui-mid:rgba(10,20,50,0.15); --ui-strong:rgba(10,20,50,0.4); }
 
 /* ── Base ── */
 html, body {
@@ -160,12 +155,16 @@ h3 {
 }
 .compare-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1.5rem;
   padding: 0.9rem 1rem;
   font-size: 0.95rem;
 }
-.compare-row .mono { min-width: 140px; }
+.compare-row .mono { 
+  width: 180px;
+  flex-shrink: 0;
+  word-wrap: break-word;
+}
 .compare-divider { height: 1px; background: var(--ui-mid); }
 
 /* ── Explainer (Landing) ── */
@@ -174,10 +173,10 @@ h3 {
   padding-left: 1.25rem;
   margin-bottom: 2rem;
 }
-.explainer p { font-size: 0.95rem; color: var(--fg2); margin-bottom: 0.75rem; line-height: 1.75; }
+.explainer p { font-size: 0.95rem; color: var(--fg); margin-bottom: 0.75rem; line-height: 1.75; }
 .explainer p:last-child { margin-bottom: 0; }
 .explainer strong { color: var(--fg); }
-.explainer em { font-style: italic; }
+.explainer em { font-style: normal; font-weight: bold; }
 
 /* ── Form fields ── */
 .field-group { display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 2rem; }
@@ -190,17 +189,20 @@ h3 {
 }
 .field input, .field select {
   width: 100%;
+  height: 2.5rem;
   background: var(--bg2);
   border: 1px solid var(--ui-mid);
   border-bottom: 2px solid var(--ui-strong);
   color: var(--fg);
   font-family: var(--serif);
   font-size: 1rem;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
+  line-height: 1.5;
   appearance: none;
   -webkit-appearance: none;
   border-radius: 0;
   outline: none;
+  box-sizing: border-box;
 }
 .field input:focus, .field select:focus { border-bottom-color: var(--accent); }
 .field select option { background: var(--bg); }
@@ -246,6 +248,18 @@ h3 {
   color: var(--accent);
   flex-shrink: 0;
 }
+
+/* 十天干字符颜色 — 背景色加深版本 */
+body[data-stem="甲"] .dm-char { color: #6a7a54; }
+body[data-stem="乙"] .dm-char { color: #5a7a50; }
+body[data-stem="丙"] .dm-char { color: #9a7a38; }
+body[data-stem="丁"] .dm-char { color: #7a6a60; }
+body[data-stem="戊"] .dm-char { color: #7a6a38; }
+body[data-stem="己"] .dm-char { color: #6a5a30; }
+body[data-stem="庚"] .dm-char { color: #6a5a70; }
+body[data-stem="辛"] .dm-char { color: #5a6a88; }
+body[data-stem="壬"] .dm-char { color: #5a7590; }
+body[data-stem="癸"] .dm-char { color: #4a7a70; }
 .dm-right { padding-top: 0.5rem; }
 .dm-label {
   font-family: var(--mono);
@@ -277,20 +291,23 @@ h3 {
 /* ── Liunian ── */
 .liunian-block {
   background: var(--bg2);
-  border-left: 3px solid var(--ui-strong);
-  padding: 0.9rem 1.1rem;
-  font-size: 0.88rem;
-  color: var(--fg2);
-  font-style: italic;
-  line-height: 1.7;
+  border: 1px solid var(--ui-mid);
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   margin-bottom: 1rem;
 }
+.liunian-block p {
+  font-size: 0.9rem;
+  color: var(--fg2);
+  line-height: 1.7;
+}
 .liunian-label {
-  font-family: var(--cn);
-  font-style: normal;
-  font-size: 0.82rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
   color: var(--fg3);
-  margin-right: 0.5rem;
 }
 
 /* ── Resonance ── */
@@ -298,7 +315,6 @@ h3 {
 .res-btn {
   background: var(--bg2);
   border: 1px solid var(--ui-mid);
-  border-left: 3px solid var(--ui-mid);
   padding: 1rem 1.25rem;
   text-align: left;
   cursor: pointer;
@@ -306,13 +322,13 @@ h3 {
   flex-direction: column;
   gap: 0.3rem;
   font-family: var(--serif);
-  transition: border-left-color 0.15s;
+  transition: border-color 0.15s;
   border-radius: 0;
 }
 .res-btn strong { font-size: 1rem; color: var(--fg); font-weight: 500; display: block; }
 .res-btn span { font-size: 0.88rem; color: var(--fg3); }
-.res-btn:hover { border-left-color: var(--fg2); }
-.res-btn.selected { border-left-color: var(--accent); background: var(--bg); }
+.res-btn:hover { border-color: var(--fg2); }
+.res-btn.selected { border-color: var(--accent); background: var(--bg); }
 .res-btn.selected strong { color: var(--accent); }
 .resonance-note { margin-top: 1rem; }
 
